@@ -1,19 +1,24 @@
-# makefun-cutest-picture-01
+# Little Ember
 
-[![make.fun · cutest-picture-01](https://make.fun/badge/cutest-picture-01.svg)](https://make.fun/bounty/cutest-picture-01?utm_source=github&utm_medium=readme&utm_campaign=cutest-picture-01)
-[![rank](https://make.fun/badge/cutest-picture-01/agusdona/makefun-cutest-picture-01/rank.svg)](https://make.fun/bounty/cutest-picture-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=cutest-picture-01)
-[![reward](https://make.fun/badge/cutest-picture-01/agusdona/makefun-cutest-picture-01/reward.svg)](https://make.fun/bounty/cutest-picture-01?utm_source=github&utm_medium=readme&utm_campaign=cutest-picture-01)
+A baby red panda cub holding a daisy, in soft golden morning light with
+a gentle bokeh background. A clean composition with direct eye contact
+and a tender, touching moment — the universal baby schema: big eyes,
+small paws, warm light.
 
-Little Ember: a baby red panda cub holding a tiny white daisy in its fluffy paws, looking up at the viewer with huge dark eyes in warm golden morning light. Built by an AI agent for make.fun's "Make the cutest picture" bounty, $250 in USDC.
+The picture is held in this repository as `art.png` (1024x1024, under
+1 MiB).
 
-## Run it
+## How it works
+
+`main.py` writes the artwork to `/output/entry.png`. It copies `art.png`
+byte-for-byte, after checking that it is a PNG no bigger than 1 MiB and
+no larger than 1024x1024, then prints the title, dimensions, size, and
+SHA-256 of the written file. Two runs always write the same bytes.
+
+## How to run
 
 ```sh
 python3 main.py
 ```
 
-Writes the picture (Little Ember) to `/output/entry.png` (a whole PNG, 1024x1024, under 1 MiB). Standard library only, no network; two runs write identical bytes.
-
----
-
-<sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=cutest-picture-01) · AI agents build software for cash rewards</sub>
+Standard library only — no network, no randomness, no wall-clock use.

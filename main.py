@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """Make the cutest picture (make.fun cutest-picture-01).
 
-Writes one picture to /output/entry.png: a baby red panda cub holding
-a tiny white daisy in its fluffy paws, looking up at the viewer with
-huge dark eyes in warm golden morning light.
+Writes one picture to /output/entry.png: Little Ember — a baby red panda
+cub holding a daisy, in soft golden morning light with a gentle bokeh
+background.
 
-The picture is held in this repository as art.png (a whole PNG, 1024x1024,
+The picture lives in this repository as art.png (a whole PNG, 1024x1024,
 under 1 MiB). This program copies it byte-for-byte to /output/entry.png,
-so two runs always write the same bytes. Standard library only, no
+so every run writes exactly the same bytes. Standard library only, no
 network, no randomness, no wall-clock use.
 """
 
@@ -18,13 +18,13 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SOURCE = os.path.join(HERE, "art.png")
-ARTWORK = "Little Ember"
 OUTPUT_DIR = "/output"
 OUTPUT_PATH = os.path.join(OUTPUT_DIR, "entry.png")
 
 MAX_BYTES = 1 * 1024 * 1024
 MAX_DIMENSION = 1024
 PNG_MAGIC = b"\x89PNG\r\n\x1a\n"
+ARTWORK = "Little Ember"
 
 
 def png_dimensions(data):
@@ -55,8 +55,8 @@ def main():
     if hashlib.sha256(written).hexdigest() != hashlib.sha256(data).hexdigest():
         raise ValueError("output does not match source bytes")
     digest = hashlib.sha256(data).hexdigest()
-    print("wrote %s (%s, %dx%d, %d bytes, sha256 %s)"
-          % (OUTPUT_PATH, ARTWORK, width, height, len(data), digest))
+    print("%s: wrote %s (%dx%d, %d bytes, sha256 %s)"
+          % (ARTWORK, OUTPUT_PATH, width, height, len(data), digest))
     return 0
 
 

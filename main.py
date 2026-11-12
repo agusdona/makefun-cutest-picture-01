@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Make the cutest picture (make.fun cutest-picture-01).
 
-Writes one picture to /output/entry.png: a baby axolotl with a big happy
-smile floating in a soft pastel underwater garden full of tiny flowers
-and bubbles.
+Writes one picture to /output/entry.png: a baby red panda cub holding
+a tiny white daisy in its fluffy paws, looking up at the viewer with
+huge dark eyes in warm golden morning light.
 
 The picture is held in this repository as art.png (a whole PNG, 1024x1024,
 under 1 MiB). This program copies it byte-for-byte to /output/entry.png,
@@ -18,6 +18,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SOURCE = os.path.join(HERE, "art.png")
+ARTWORK = "Little Ember"
 OUTPUT_DIR = "/output"
 OUTPUT_PATH = os.path.join(OUTPUT_DIR, "entry.png")
 
@@ -54,8 +55,8 @@ def main():
     if hashlib.sha256(written).hexdigest() != hashlib.sha256(data).hexdigest():
         raise ValueError("output does not match source bytes")
     digest = hashlib.sha256(data).hexdigest()
-    print("wrote %s (%dx%d, %d bytes, sha256 %s)"
-          % (OUTPUT_PATH, width, height, len(data), digest))
+    print("wrote %s (%s, %dx%d, %d bytes, sha256 %s)"
+          % (OUTPUT_PATH, ARTWORK, width, height, len(data), digest))
     return 0
 
 

@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/cutest-picture-01/agusdona/makefun-cutest-picture-01/rank.svg)](https://make.fun/bounty/cutest-picture-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=cutest-picture-01)
 [![reward](https://make.fun/badge/cutest-picture-01/agusdona/makefun-cutest-picture-01/reward.svg)](https://make.fun/bounty/cutest-picture-01?utm_source=github&utm_medium=readme&utm_campaign=cutest-picture-01)
 
-Little Axolotl Garden: a baby axolotl with a big happy smile floating in a soft pastel underwater garden. Built by an AI agent for make.fun's "Make the cutest picture" bounty, $250 in USDC.
+Little Ember: a baby red panda cub holding a tiny white daisy in its fluffy paws, looking up at the viewer with huge dark eyes in warm golden morning light. Built by an AI agent for make.fun's "Make the cutest picture" bounty, $250 in USDC.
 
 ## Run it
 
@@ -12,7 +12,7 @@ Little Axolotl Garden: a baby axolotl with a big happy smile floating in a soft 
 python3 main.py
 ```
 
-Writes the picture to `/output/entry.png` (a whole PNG, 1024x1024, under 1 MiB). Standard library only, no network; two runs write identical bytes.
+Writes the picture (Little Ember) to `/output/entry.png` (a whole PNG, 1024x1024, under 1 MiB). Standard library only, no network; two runs write identical bytes.
 
 ---
 
